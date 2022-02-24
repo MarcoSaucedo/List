@@ -3,6 +3,9 @@ package uaslp.objetos.list;
 import uaslp.objetos.list.arraylist.ArrayList;
 import uaslp.objetos.list.arraylist.ArrayListIterator;
 
+//import uaslp.objetos.list.linkedlist.LinkedList;
+//import uaslp.objetos.list.linkedlist.LinkedListIterator;
+
 //MainArray
 
 public class Main {
@@ -124,13 +127,8 @@ public class Main {
     }
 }
 
-//Main List
+/*Main List
 
-//import uaslp.objetos.list.linkedlist.LinkedList;
-//import uaslp.objetos.list.linkedlist.LinkedListIterator;
-
-
-/*
 public class Main {
 
 
