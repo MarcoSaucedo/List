@@ -1,6 +1,7 @@
 package uaslp.objetos.list;
 
 import uaslp.objetos.list.arraylist.ArrayList;
+import uaslp.objetos.list.linkedlist.LinkedList;
 
 public class Main {
 
@@ -8,9 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List team1 = new ArrayList();
-        List team2 = new ArrayList();
-        List team3 = new ArrayList();
+        List <String> team1 = new ArrayList<>();
+        List <String> team2 = new LinkedList<>();
+        List <String> team3 = new LinkedList<>();
 
 
         team1.addAtTail("Jesús");
@@ -23,7 +24,7 @@ public class Main {
 
         team3.addAtFront("Imelda");
 
-        Iterator iterator;
+        Iterator<String> iterator;
 
         iterator = team1.getIterator();
 

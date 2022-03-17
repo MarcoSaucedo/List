@@ -3,25 +3,26 @@ package uaslp.objetos.list.arraylist;
 import uaslp.objetos.list.Iterator;
 import uaslp.objetos.list.List;
 
-public class ArrayList implements List {
+public class ArrayList <T>implements List <T>{
 
     private static final int DEFAULT_SIZE = 2;
-    private String[] array;
+    private T[] array;
     private int size;
 
     public static String getName(){
         return "ArrayList";
     }
 
-    public ArrayList(){
-        array = new String[DEFAULT_SIZE];
+    public ArrayList()
+    {
+        array = (T[])new Object[DEFAULT_SIZE];
+
     }
 
-    public ArrayList(int size){
-        array = new String[size];
+    public ArrayList(int size){array = (T[])new Object[size];
     }
 
-    public void addAtTail(String data) {
+    public void addAtTail(T data) {
 
         if(size == array.length){
             increaseArraySize();
@@ -31,7 +32,7 @@ public class ArrayList implements List {
         size++;
     }
 
-    public void addAtFront(String data) {
+    public void addAtFront(T data) {
 
         if(size == array.length){
             increaseArraySize();
@@ -65,7 +66,7 @@ public class ArrayList implements List {
         size = 0;
     }
 
-    public void setAt(int index, String data) {
+    public void setAt(int index, T data) {
         if(index >= 0 && index < size){
             array[index] = data;
         }
@@ -81,12 +82,12 @@ public class ArrayList implements List {
      * O(1)
      *
      */
-    public String getAt(int index) {
+    public T getAt(int index) {
         return index >= 0 && index < size ? array[index] : null;
     }
 
-    public Iterator getIterator() {
-        return new ArrayListIterator(this);
+    public Iterator<T> getIterator() {
+        return new ArrayListIterator<>(this);
     }
 
     public int getSize() {
@@ -94,7 +95,7 @@ public class ArrayList implements List {
     }
 
     private void increaseArraySize(){
-        String []newArray = new String[array.length * 2];
+        T []newArray = (T[])new Object[array.length * 2];
 
         for(int i = 0; i< size;i++){
             newArray[i] = array[i];
