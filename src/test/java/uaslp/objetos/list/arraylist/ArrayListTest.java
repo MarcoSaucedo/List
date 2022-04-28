@@ -17,6 +17,24 @@ public class ArrayListTest {
         Assertions.assertEquals(0,sizeOfList, "Size of list after creation must be zero");
     }
 
+    @Test
+    public void givenANewArray_whenAddAtTailIsFull_thenIncreaseArraySize() throws NotNullValuesAllowedException{
+        ArrayList<String> array = new ArrayList<>(2);
+
+        array.addAtFront("Hola");
+        array.addAtFront("Adios");
+
+        array.addAtTail("Holaaaa");
+
+        int sizeOfList = array.getSize();
+
+        Assertions.assertEquals(3,sizeOfList, "Se espera un tamaño de 3");
+        Assertions.assertEquals(array.getAt(0), "Adios");
+        Assertions.assertEquals(array.getAt(1), "Hola");
+        Assertions.assertEquals(array.getAt(2), "Holaaaa");
+
+    }
+
 
 
    @Test

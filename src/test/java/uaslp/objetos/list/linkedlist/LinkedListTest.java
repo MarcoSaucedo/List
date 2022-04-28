@@ -17,6 +17,8 @@ public class LinkedListTest {
         Assertions.assertEquals(0,sizeOfList, "Size of list after creation must be zero");
     }
 
+
+
     @Test
     public void givenANewList_whenGetAt_thenExceptionIsThrown(){
         LinkedList<String> list = new LinkedList<>();

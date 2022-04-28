@@ -19,8 +19,8 @@ public class ArrayList <T>implements List <T>{
 
     }
 
-   // public ArrayList(int size){array = (T[])new Object[size];
-    //}
+   public ArrayList(int size){array = (T[])new Object[size];
+    }
 
     public void addAtTail(T data) {
 
